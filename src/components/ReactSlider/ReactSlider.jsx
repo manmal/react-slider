@@ -55,7 +55,7 @@ function trimPreceding(length, nextValue, minDistance, min) {
 function addHandlers(eventMap) {
     Object.keys(eventMap).forEach(key => {
         if (typeof document !== 'undefined') {
-            document.addEventListener(key, eventMap[key], false);
+            document.addEventListener(key, eventMap[key], key === "touchmove");
         }
     });
 }
@@ -63,7 +63,7 @@ function addHandlers(eventMap) {
 function removeHandlers(eventMap) {
     Object.keys(eventMap).forEach(key => {
         if (typeof document !== 'undefined') {
-            document.removeEventListener(key, eventMap[key], false);
+            document.removeEventListener(key, eventMap[key], key === "touchmove");
         }
     });
 }
