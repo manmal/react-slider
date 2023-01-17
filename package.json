@@ -40,7 +40,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "^16 || ^17",
+    "react": "^16 || ^17 || ^18",
     "prop-types": "^15.6"
   },
   "devDependencies": {
